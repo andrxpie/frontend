@@ -5,16 +5,64 @@
   --foreground: #171717;
 }
 
+@theme {
+  --color-olive-350: #646b5b;
+  --color-olive-400: #565c4f;
+  --color-olive-450: #4b5147;
+  --color-olive-500: #41463d;
+  --color-olive-600: #363b32;
+  --color-olive-700: #2e332a;
+  --color-olive-800: #23271f;
+  --color-olive-850: #1a1d17;
+  --color-olive-900: #131511;
+  --color-olive-950: #0d0f0c;
+
+  --color-lavender-300: #c8bef7;
+  --color-lavender-400: #b1a4f4;
+  --color-lavender-500: #9d8df1;
+
+  --color-mint-300: #c4f8ec;
+  --color-mint-500: #95f2d9;
+
+  --color-bg-base: var(--color-olive-900);
+  --color-bg-deep: var(--color-olive-950);
+
+  --color-surface: #2c2a30;
+  --color-surface-strong: #37343c;
+  --color-surface-muted: #302e35;
+  --color-surface-subtle: #232128;
+
+  --color-text-primary: #eef0ea;
+  --color-text-secondary: #c4c7be;
+  --color-text-muted: #918d97;
+  --color-text-disabled: #6f6b74;
+  --color-text-on-accent: #14180f;
+
+  --color-border-subtle: rgba(146, 140, 156, 0.3);
+  --color-border-default: #4c4954;
+
+  --color-accent: var(--color-lavender-500);
+  --color-accent-soft: rgba(157, 141, 241, 0.14);
+
+  --background-image-grad-accent: linear-gradient(120deg, var(--color-lavender-500), var(--color-mint-500));
+
+  --background-image-hero-overlay:
+    radial-gradient(900px 760px at 12% 0%, rgba(157, 141, 241, 0.2), transparent 60%),
+    radial-gradient(420px 420px at 88% 32%, rgba(149, 242, 217, 0.16), transparent 70%),
+    linear-gradient(180deg, rgba(13, 15, 12, 0.5) 0%, rgba(19, 21, 17, 0.5) 40%, rgba(19, 21, 17, 0.9) 82%, #131511 100%);
+}
+
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --bg-primary: var(--background);
+  --fg-primary: var(--foreground);
+  --font-sans: var(--font-inter);
+  --font-heading: var(--font-montserrat);
+  --font-serif: var(--font-lora);
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
+    --background: #131511;
     --foreground: #ededed;
   }
 }
@@ -23,4 +71,5 @@ body {
   background: var(--background);
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
+  scroll-behavior: smooth;
 }
