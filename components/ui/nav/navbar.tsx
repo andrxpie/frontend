@@ -1,3 +1,4 @@
+import { cn } from "@/lib/utils";
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
@@ -8,7 +9,7 @@ interface NavbarProps {
 
 export const Navbar: React.FC<NavbarProps> = ({ className }) => {
   return (
-    <nav className={`absolute top-0 left-[10%] right-[10%] mx-auto flex p-4 items-center z-10 ${className}`}>
+    <nav className={cn("absolute top-0 left-[10%] right-[10%] mx-auto flex p-4 items-center z-10", className)}>
       <Link href="/">
         <Image src="/brand-logo.svg" alt="Logo" width={131} height={34} loading="eager" />
       </Link>
