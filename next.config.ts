@@ -1,8 +1,15 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  /* config options here */
-  allowedDevOrigins: ['26.28.0.238'],
+  ...(process.env.DEV_ORIGIN
+    ? { allowedDevOrigins: [process.env.DEV_ORIGIN] }
+    : {}),
+  images: {
+    remotePatterns: [
+      { protocol: "https", hostname: "picsum.photos" },
+      { protocol: "https", hostname: "fastly.picsum.photos" },
+    ],
+  },
 };
 
 export default nextConfig;
